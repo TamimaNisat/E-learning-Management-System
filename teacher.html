@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	<title>E-learning</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<!-- awasome cdn fonts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<header>
+	<div id="menu" class="fas fa-bars"></div>
+	
+	<a href="#" class="logo"><i class="fas fa-user-graduate"></i>  E-Learning</a>
+
+	<nav class="navbar">
+	  <ul>
+	   	<li><a href="index.html">home</a></li>
+	   	<li><a href="about.html">about</a></li>
+	   	<li><a href="course.html">course</a></li>
+	   	<li><a href="teacher.html">teachers</a></li>
+	   	<li><a href="contact.html">contact</a></li>
+	   </ul>
+	</nav>  
+    <?php
+      $myfile = fopen("text_file/user_email.txt", "r") or die("Unable to open file!");
+      $user_email = fgets($myfile);
+      if($user_email == NULL){ ?>
+      <div id="login" class="fas fa-user-circle"></div>
+      <?php
+     }
+      ?>
+</header>
+<!-- login section -->
+<div class="login-form">
+	<form action="login.php" method="post">
+		<h3 >Login</h3>
+		<input type="email" name="email" class="box"placeholder="email">
+		<input type="text" name="password" class="box"placeholder="password" >
+		<!-- <p>forgot password?
+			<a href="#">click here</a></p> -->
+		<p>don't have an account?<a href="reg.html">register now</a></p>
+		<input type="Submit" class="btn" value="login">
+		<i class="fas fa-times"></i>
+		
+	</form>
+</div>
+
+<!-- Teacher section -->
+
+<section class="teacher" id="teacher">
+
+	<h1 class="heading"> Our Popular Teachers</h1>
+	<div class="box-container">
+
+		<div class="box">
+			<img src="img\t1.png" alt="">
+			 <div class="content">
+				<div class="stars">
+					<i>Sweety Lima</i>
+				</div>
+				<div class="str">
+					<i>Lecturer</i>
+				</div>
+				<a class="title">Department of Computer Science & Engineering(BUBT)</a>
+				<!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+			</div>
+		</div>
+	
+
+	<div class="box">
+			<img src="img\t2.png" alt="" class="center">
+			 <div class="content">
+				<div class="stars">
+					<i>Nourin Khandaker</i>
+				</div>
+				<div class="str">
+					<i>Lecturer</i>
+				</div>
+				<a class="title">Department of Computer Science & Engineering(BUBT)</a>
+				<!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+			</div>
+		</div>
+
+<div class="box">
+			<img src="img\t3.png" alt="">
+			 <div class="content">
+				<div class="stars">
+					<i>Ali Azgar</i>
+				</div>
+				<div class="str">
+					<i>Assistant Professor</i>
+				</div>
+				<a class="title">Department of Computer Science & Engineering(BUBT)</a>
+				<!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+			</div>
+		</div>
+<div class="box">
+			<img src="img\t4.png" alt="">
+			 <div class="content">
+				<div class="stars">
+					<i>T.M. Amir-Ul-Haque Bhuiyan</i>
+				</div>
+				<div class="str">
+					<i>Assistant Professor</i>
+				</div>
+				<a class="title">Department of Computer Science & Engineering(BUBT)</a>
+				<!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+			</div>
+		</div>
+<div class="box">
+			<img src="img\t.5.png" alt="">
+			 <div class="content">
+				<div class="stars">
+					<i>Md. Mamun Hossain</i>
+				</div>
+				<div class="str">
+					<i>Lecturer</i>
+				</div>
+				<a class="title">Department of Computer Science & Engineering(BUBT)</a>
+				<!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+			</div>
+		</div>
+<div class="box">
+			<img src="img\t6.png" alt="">
+			 <div class="content">
+				<div class="stars">
+					<i>Md. Ahsanul Haque</i>
+				</div>
+				<div class="str">
+					<i>Lecturer</i>
+				</div>
+				<a class="title">Department of Computer Science & Engineering(BUBT)</a>
+				<!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- footer section -->
+<div class="footer">
+	<div class="box-container">
+		<div class="box">
+			<h3>branch location</h3>
+			<a href="https://tinyurl.com/pcsyfedb" target="_blank">Dhanmobdi Dhaka</a>
+			<a href="#">Jashore</a>
+		</div>
+		<div class="box">
+			<h3>quick links</h3>
+			<a href="index.html">home</a>
+			<a href="about.html">about</a>
+			<a href="course.html">course</a>
+			<a href="teacher.html">teachers</a>
+			<a href="contact.html">contact</a>
+		</div>
+		<div class="box">
+			<h3>contact info</h3>
+			<p> <i class="fas fa-map-marker-alt"> </i>Dhanmondi, Dhaka 1216</p>
+			<p>
+				<a href="mailto:19202103311@cse.bubt.edu.bd" target="_blank">e-learn@gmail.com</a>
+			</p>
+            <p>
+               	<a href="tel:+13115552368" target="_blank">(311) 555-2368</a>
+           </p>
+		</div>
+	</div>
+	<h1 class="credit">created by  <a href="mailto:19202103311@cse.bubt.edu.bd">group-04 members  </a>all rights reserved.</h1>
+</div>
+
+
+
+
+
+
+
+
+<!-- jquery cdn link -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- js file link -->
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

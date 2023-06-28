@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device=width, initial-scale=1.0" />
+    <title>E-learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- awasome cdn fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="menu" class="fas fa-bars"></div>
+
+      <a href="#" class="logo"><i class="fas fa-user-graduate"></i>  E-Learning</a>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="course.html">course</a></li>
+          <li><a href="teacher.html">teachers</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <?php
+      $myfile = fopen("text_file/user_email.txt", "r") or die("Unable to open file!");
+      $user_email = fgets($myfile);
+      if($user_email == NULL){ ?>
+      <div id="login" class="fas fa-user-circle"></div>
+      <?php
+     }
+      ?>
+    </header>
+    <!-- login section -->
+    <div class="login-form">
+      <form action="login.php" method="post">
+        <h3>Login</h3>
+        <input type="email" name="email" class="box" placeholder="email" />
+        <input type="text" name="password" class="box" placeholder="password" />
+        <!-- <p>forgot password?
+			<a href="#">click here</a></p> -->
+        <p>don't have an account?<a href="reg.html">register now</a></p>
+        <input type="Submit" class="btn" value="login" />
+        <i class="fas fa-times"></i>
+      </form>
+    </div>
+    <!-- home section -->
+    <section class="home" id="home">
+      <h1>education from home</h1>
+      <p>
+        Education is a purposeful activity directed at achieving certain aims,
+        such as transmitting knowledge or fostering skills and character traits.
+      </p>
+      <a href="#"><button class="btn">get started</button></a>
+
+      <div class="shape"></div>
+    </section>
+    <!-- about section -->
+
+    <section class="about" id="about">
+      <div class="image">
+        <img src="img\img.png" alt="center" />
+      </div>
+      <div class="content">
+        <h3>why choose us?</h3>
+        <p>
+          E-learning in companies is a growing trend today. Thanks to the
+          Internet and new technologies, public or private companies achieve
+          great results, reducing costs and improving the performance of their
+          training programs and educational solutions. Understanding the value
+          of e-learning as a learning system helps to make the right decision
+          about when and why to use it.<br />
+          <b>Time Efficient -</b> By using e-learning you can study when it
+          suits you, for as long and as often as you want.<br />
+          <b>Simplicity -</b> Since the student can study and repeat at any time
+          the learning is easier.<br />
+          <b>Guidance -</b> A Premium Course student can easily come in contact
+          with us for help and support.
+        </p>
+        <!-- <a href="#"><button class="btn">learn more</button></a> -->
+      </div>
+    </section>
+
+    <!-- course section -->
+    <section class="course" id="course">
+      <h1 class="heading">Our Popular Courses</h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="img\c1.png" alt="" />
+          <h3 class="price">$50</h3>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <?php
+              if($user_email != NULL){ ?>
+            <a href="course_details.html" class="title"
+              >learn front end development</a
+            >
+            <?php 
+				}
+				else{ ?>
+            <a href="reg.html" class="title">learn front end development</a>
+            <?php
+				}
+				?>
+            <p>
+              Google's Kotlin for Android training courses can help you advance
+              your skills. Looking to gain experience with Android app
+              development.
+            </p>
+            <div class="info">
+              <h3><i class="far fa-clock"> 3 hours</i></h3>
+              <h3><i class="far fa-clock"> 6 months </i></h3>
+              <h3><i class="far fa-clock"> 6 modules</i></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="img\c2.png" alt="" />
+          <h3 class="price">$50</h3>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <?php
+              if($user_email != NULL){ ?>
+            <a href="course_details.html" class="title"
+              >learn front end development</a
+            >
+            <?php 
+        }
+        else{ ?>
+            <a href="reg.html" class="title">learn front end development</a>
+            <?php
+        }
+        ?>
+            <p>
+              HTML, CSS, and JavaScript are the basic languages you need to know
+              to create a website. To become a Front-End Developer, start with
+              the subjects below
+            </p>
+            <div class="info">
+              <h3><i class="far fa-clock"> 2 hours</i></h3>
+              <h3><i class="far fa-clock"> 2 months </i></h3>
+              <h3><i class="far fa-clock"> 3 modules</i></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="img\c4.png" alt="" />
+          <h3 class="price">$50</h3>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <?php
+              if($user_email != NULL){ ?>
+            <a href="course_details.html" class="title">learn graphic design</a
+            >
+            <?php 
+        }
+        else{ ?>
+            <a href="reg.html" class="title">learn graphic design</a>
+            <?php
+        }
+        ?>
+            <p>
+              Become a Graphic Design Pro with these valuable skills. Find the
+              right instructor for you. Choose from many topics, skill levels,
+              and languages.
+            </p>
+            <div class="info">
+              <h3><i class="far fa-clock"> 3 hours</i></h3>
+              <h3><i class="far fa-clock"> 6 months </i></h3>
+              <h3><i class="far fa-clock"> 12 modules</i></h3>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img\c8.png" alt="" />
+          <h3 class="price">$50</h3>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <?php
+              if($user_email != NULL){ ?>
+            <a href="course_details.html" class="title">learn python course</a>
+            <?php 
+        }
+        else{ ?>
+            <a href="reg.html" class="title">learn python course</a>
+            <?php
+        }
+        ?>
+            <p>
+              Master your language with lessons, quizzes, and projects designed
+              for real-life scenarios. Create portfolio projects that showcase
+              your new skills to help land your dream job.
+            </p>
+            <div class="info">
+              <h3><i class="far fa-clock"> 3 hours</i></h3>
+              <h3><i class="far fa-clock"> 6 months </i></h3>
+              <h3><i class="far fa-clock"> 12 modules</i></h3>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img\c9.png" alt="" />
+          <h3 class="price">$50</h3>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <?php
+              if($user_email != NULL){ ?>
+            <a href="course_details.html" class="title">learn mongodb</a>
+            <?php 
+        }
+        else{ ?>
+            <a href="reg.html" class="title">learn mongodb</a>
+            <?php
+        }
+        ?>
+            <p>
+              Become indispensable to any company with the hottest IT skills.
+              Find the right instructor for you. Choose from many topics, skill
+              levels, and languages.
+            </p>
+            <div class="info">
+              <h3><i class="far fa-clock"> 3 hours</i></h3>
+              <h3><i class="far fa-clock"> 6 months </i></h3>
+              <h3><i class="far fa-clock"> 12 modules</i></h3>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img\c10.png" alt="" />
+          <h3 class="price">$50</h3>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <?php
+              if($user_email != NULL){ ?>
+            <a href="course_details.html" class="title">learn django</a>
+            <?php 
+        }
+        else{ ?>
+            <a href="reg.html" class="title">learn django</a>
+            <?php
+        }
+        ?>
+            <p>
+              This specialization introduces Python programmers to building
+              websites using the Django library. Across the four courses, you
+              will learn HTML, CSS, SQL, Django, JavaScript, jQuery, and JSON
+              Web Services.
+            </p>
+            <div class="info">
+              <h3><i class="far fa-clock"> 3 hours</i></h3>
+              <h3><i class="far fa-clock"> 6 months </i></h3>
+              <h3><i class="far fa-clock"> 12 modules</i></h3>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img\c5.png" alt="" />
+          <h3 class="price">$50</h3>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <?php
+              if($user_email != NULL){ ?>
+            <a href="course_details.html" class="title">learn C++ </a>
+            >
+            <?php 
+        }
+        else{ ?>
+            <a href="reg.html" class="title">learn C++ </a>
+            <?php
+        }
+        ?>
+            <p>
+              C++ is one of the most popular languages in the world! Why is C++
+              so popular? Well, it's a general-purpose object-oriented
+              programming language that is flexible, efficient, fast and widely
+              used.
+            </p>
+            <div class="info">
+              <h3><i class="far fa-clock"> 3 hours</i></h3>
+              <h3><i class="far fa-clock"> 6 months </i></h3>
+              <h3><i class="far fa-clock"> 12 modules</i></h3>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img\c6.png" alt="" />
+          <h3 class="price">$50</h3>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <?php
+              if($user_email != NULL){ ?>
+            <a href="course_details.html" class="title">spoken English</a>
+            <?php 
+        }
+        else{ ?>
+            <a href="reg.html" class="title">spoken English</a>
+            <?php
+        }
+        ?>
+            <p>
+              Learn English with free spoken English lessons from Oxford Online
+              English. Our video lessons make it easy to speak and understand
+              English.
+            </p>
+            <div class="info">
+              <h3><i class="far fa-clock"> 3 hours</i></h3>
+              <h3><i class="far fa-clock"> 6 months </i></h3>
+              <h3><i class="far fa-clock"> 12 modules</i></h3>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img\c7.png" alt="" />
+          <h3 class="price">$50</h3>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <?php
+              if($user_email != NULL){ ?>
+            <a href="course_details.html" class="title">learn IELTS course</a
+            >
+            <?php 
+        }
+        else{ ?>
+            <a href="reg.html" class="title">learn IELTS course</a>
+            <?php
+        }
+        ?>
+            <p>
+              Usually, students for the preparation of IELTS do not get
+              appropriate material. This is because IELTS tests the students’
+              English language efficiency, and thus they can never be sure about
+              what to practice.
+            </p>
+            <div class="info">
+              <h3><i class="far fa-clock"> 3 hours</i></h3>
+              <h3><i class="far fa-clock"> 6 months </i></h3>
+              <h3><i class="far fa-clock"> 12 modules</i></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teacher section -->
+
+    <section class="teacher" id="teacher">
+      <h1 class="heading">Our Popular Teachers</h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="img\t1.png" alt="" />
+          <div class="content">
+            <div class="stars">
+              <i>Sweety Lima</i>
+            </div>
+            <div class="str">
+              <i>Lecturer</i>
+            </div>
+            <a class="title"
+              >Department of Computer Science & Engineering(BUBT)</a
+            >
+            <!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="img\t2.png" alt="" class="center" />
+          <div class="content">
+            <div class="stars">
+              <i>Nourin Khandaker</i>
+            </div>
+            <div class="str">
+              <i>Lecturer</i>
+            </div>
+            <a class="title"
+              >Department of Computer Science & Engineering(BUBT)</a
+            >
+            <!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="img\t3.png" alt="" />
+          <div class="content">
+            <div class="stars">
+              <i>Ali Azgar</i>
+            </div>
+            <div class="str">
+              <i>Assistant Professor</i>
+            </div>
+            <a class="title"
+              >Department of Computer Science & Engineering(BUBT)</a
+            >
+            <!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+          </div>
+        </div>
+        <div class="box">
+          <img src="img\t4.png" alt="" />
+          <div class="content">
+            <div class="stars">
+              <i>T.M. Amir-Ul-Haque Bhuiyan</i>
+            </div>
+            <div class="str">
+              <i>Assistant Professor</i>
+            </div>
+            <a class="title"
+              >Department of Computer Science & Engineering(BUBT)</a
+            >
+            <!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+          </div>
+        </div>
+        <div class="box">
+          <img src="img\t.5.png" alt="" />
+          <div class="content">
+            <div class="stars">
+              <i>Md. Mamun Hossain</i>
+            </div>
+            <div class="str">
+              <i>Lecturer</i>
+            </div>
+            <a class="title"
+              >Department of Computer Science & Engineering(BUBT)</a
+            >
+            <!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+          </div>
+        </div>
+        <div class="box">
+          <img src="img\t6.png" alt="" />
+          <div class="content">
+            <div class="stars">
+              <i>Md. Ahsanul Haque</i>
+            </div>
+            <div class="str">
+              <i>Lecturer</i>
+            </div>
+            <a class="title"
+              >Department of Computer Science & Engineering(BUBT)</a
+            >
+            <!-- <p>M.Sc in Computer Science & Engineering, Jahangirnagar University, 2017
+                   &
+               B.Sc. (Hons.) in Computer Science & Engineering, Jahangirnagar University, 2016</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading">contact us</h1>
+      <div class="row">
+        <form action="contact.php" method="post">
+          <input
+            type="text"
+            name="full_name"
+            class="box"
+            placeholder="full name"
+          />
+          <input
+            type="email"
+            name="email"
+            class="box"
+            placeholder="your email"
+          />
+          <input
+            type="password"
+            name="password"
+            class="box"
+            placeholder="your password"
+          />
+          <input
+            type="text"
+            name="phone"
+            class="box"
+            placeholder="your number"
+          />
+          <textarea
+            type="text"
+            name="address"
+            id=""
+            cols="30"
+            rows="10"
+            class="box address"
+            placeholder="your address"
+          ></textarea>
+          <input type="Submit" class="btn" value="send now" />
+        </form>
+        <div class="image">
+          <img src="img\cus.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- footer section -->
+    <div class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>branch location</h3>
+          <a href="https://tinyurl.com/pcsyfedb" target="_blank"
+            >Dhanmobdi Dhaka</a
+          >
+          <a href="#">Jashore</a>
+        </div>
+        <div class="box">
+      <h3>quick links</h3>
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="course.html">course</a>
+      <a href="teacher.html">teachers</a>
+      <a href="contact.html">contact</a>
+    </div>
+        <div class="box">
+          <h3>contact info</h3>
+          <p><i class="fas fa-map-marker-alt"> </i>Dhanmondi, Dhaka 1216</p>
+          <p>
+            <a href="mailto:19202103311@cse.bubt.edu.bd" target="_blank"
+              >e-learn@gmail.com</a
+            >
+          </p>
+          <p>
+            <a href="tel:+13115552368" target="_blank">(311) 555-2368</a>
+          </p>
+        </div>
+      </div>
+      <h1 class="credit">
+        created by
+        <a href="mailto:19202103311@cse.bubt.edu.bd">group-04 members </a>all
+        rights reserved.
+      </h1>
+    </div>
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- js file link -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

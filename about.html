@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	<title>E-learning</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<!-- awasome cdn fonts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<header>
+	<div id="menu" class="fas fa-bars"></div>
+	
+	<a href="#" class="logo"><i class="fas fa-user-graduate"></i>  E-Learning</a>
+
+	<nav class="navbar">
+	   <ul>
+	   	<li><a href="index.html">home</a></li>
+	   	<li><a href="about.html">about</a></li>
+	   	<li><a href="course.html">course</a></li>
+	   	<li><a href="teacher.html">teachers</a></li>
+	   	<li><a href="contact.html">contact</a></li>
+	   </ul>
+	</nav>  
+
+	 <?php
+      $myfile = fopen("text_file/user_email.txt", "r") or die("Unable to open file!");
+      $user_email = fgets($myfile);
+      if($user_email == NULL){ ?>
+      <div id="login" class="fas fa-user-circle"></div>
+      <?php
+     }
+      ?>
+
+</header>
+<!-- login section -->
+<div class="login-form">
+	<form action="login.php" method="post">
+		<h3 >Login</h3>
+		<input type="email" name="email" class="box"placeholder="email">
+		<input type="text" name="password" class="box"placeholder="password" >
+		<!-- <p>forgot password?
+			<a href="#">click here</a></p> -->
+		<p>don't have an account?<a href="reg.html">register now</a></p>
+		<input type="Submit" class="btn" value="login">
+		<i class="fas fa-times"></i>
+		
+	</form>
+</div>
+<!-- about section -->
+
+    <section class="about" id="about">
+      <div class="image">
+        <img src="img\img.png" alt="center" />
+      </div>
+      <div class="content">
+        <h3>why choose us?</h3>
+        <p>
+          E-learning in companies is a growing trend today. Thanks to the
+          Internet and new technologies, public or private companies achieve
+          great results, reducing costs and improving the performance of their
+          training programs and educational solutions. Understanding the value
+          of e-learning as a learning system helps to make the right decision
+          about when and why to use it.<br />
+          <b>Time Efficient -</b> By using e-learning you can study when it
+          suits you, for as long and as often as you want.<br />
+          <b>Simplicity -</b> Since the student can study and repeat at any time
+          the learning is easier.<br />
+          <b>Guidance -</b> A Premium Course student can easily come in contact
+          with us for help and support.
+        </p>
+        <!-- <a href="#"><button class="btn">learn more</button></a> -->
+      </div>
+    </section>
+
+<!-- footer section -->
+<div class="footer">
+	<div class="box-container">
+		<div class="box">
+			<h3>branch location</h3>
+			<a href="https://tinyurl.com/pcsyfedb" target="_blank">Dhanmobdi Dhaka</a>
+			<a href="#">Jashore</a>
+		</div>
+		<div class="box">
+			<h3>quick links</h3>
+			<a href="index.html">home</a>
+			<a href="about.html">about</a>
+			<a href="course.html">course</a>
+			<a href="teacher.html">teachers</a>
+			<a href="contact.html">contact</a>
+		</div>
+		<div class="box">
+			<h3>contact info</h3>
+			<p> <i class="fas fa-map-marker-alt"> </i>Dhanmondi, Dhaka 1216</p>
+			<p>
+				<a href="mailto:19202103311@cse.bubt.edu.bd" target="_blank">e-learn@gmail.com</a>
+			</p>
+            <p>
+               	<a href="tel:+13115552368" target="_blank">(311) 555-2368</a>
+           </p>
+		</div>
+	</div>
+	<h1 class="credit">created by  <a href="mailto:19202103311@cse.bubt.edu.bd">group-04 members  </a>all rights reserved.</h1>
+</div>
+
+
+
+
+
+
+
+
+<!-- jquery cdn link -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- js file link -->
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

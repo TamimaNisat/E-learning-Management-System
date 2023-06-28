@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+<div class="wrapper">
+
+ <div class="registration_form">
+<!-- Title -->
+  <div class="title">
+    Registration Form
+  </div>
+
+<!-- Form -->
+ 
+  <form action="reg.php" method="post">
+  <div class="form_wrap">
+   <div class="input_grp">
+
+<!-- Frist name input Place -->
+     <div class="input_wrap">
+    <label>First Name</label>
+    <input type="text" name="fname">
+     </div>
+
+<!-- Last Name input place -->
+    <div class="input_wrap">
+      <label>Last Name</label>
+      <input type="text" name="lname">
+    </div>
+  </div>
+
+<!-- Email Id input Place -->
+ <div class="input_wrap">
+  <label>Email Address</label>
+  <input type="text" id="email" name="email">
+ </div>
+
+<!-- Password input place -->
+ <div class="input_wrap">
+  <label>Password</label>
+  <input type="text" id="password" name="password">
+ </div>
+
+
+<!-- Phone Number input place -->
+ <div class="input_wrap">
+  <label>Phone</label>
+  <input type="text" id="phone" name="phone">
+ </div>
+
+
+<!-- Institute Name input place -->
+ <div class="input_wrap">
+  <label>Institute</label>
+  <input type="text" id="institute" name="institute">
+ </div>
+
+<!-- Gender Select box -->
+ <div class="input_wrap">
+   <label>Gender</label>
+  <ul>
+   <li>
+     <label class="radio_wrap">
+    <input type="radio" id="gender" name="gender" value="male" class="input_radio" checked>
+    <div>Male</div>
+     </label>
+  </li>
+
+  <li>
+    <label class="radio_wrap">
+    <input type="radio" id="gender" name="gender"  value="female" class="input_radio">
+    <div>Female</div>
+   </label>
+  </li>
+ </ul>
+</div>
+
+<!-- Submit button -->
+ <div class="input_wrap">
+   <input type="submit" value="Register" class="submit_btn">
+ 
+
+ </div>
+
+</div>
+<p><br>
+      Already a member? <a href="login.html">Sign in</a>
+    </p><br><br>
+</form>
+</div>
+</div>
+</body>
+</html>
